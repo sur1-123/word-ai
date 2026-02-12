@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "word-ai": {
+      "command": "python",
+      "args": ["-m", "word_ai.main"],
+      "env": {
+        "PYTHONPATH": "python"
+      }
+    }
+  }
+}
+}

@@ -1,0 +1,28 @@
+{
+  "name": "word-ai-editor",
+  "version": "0.1.0",
+  "description": "AI-powered Word document editor with version control",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:tauri\" \"npm run dev:python\"",
+    "dev:tauri": "tauri dev",
+    "dev:python": "cd python && python -m word_ai.main",
+    "build": "tauri build",
+    "build:python": "cd python && pip install -r requirements.txt && pyinstaller word_ai/main.spec",
+    "test": "vitest",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "@tauri-apps/api": "^2.2.0",
+    "@tauri-apps/plugin-shell": "^2.2.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.2.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.7",
+    "concurrently": "^9.1.2"
+  }
+}

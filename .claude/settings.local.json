@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm:*)",
+      "Bash(dir:*)",
+      "Bash(mvn compile:*)",
+      "Bash(mvn clean install:*)",
+      "Bash(javac:*)",
+      "Bash(tree:*)",
+      "Bash(find:*)",
+      "Bash(for:*)",
+      "Bash(mvn spring-boot:run:*)",
+      "Bash(mvn clean spring-boot:run:*)",
+      "Bash(java -version)",
+      "Bash(where:*)",
+      "Bash(mvn clean compile:*)",
+      "Bash(git add:*)",
+      "Bash(ls:*)",
+      "Bash(done)",
+      "Bash(while read dir)",
+      "Bash(mvn dependency:tree:*)"
+    ],
+    "deny": [
+      "Read(./sql/**)",
+      "Read(./.snap/**)",
+      "Read(./**/target/**)"
+    ]
+  }
+}
